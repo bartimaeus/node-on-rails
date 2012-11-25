@@ -9,7 +9,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
-var app = express();
+var app = module.exports = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -23,6 +23,10 @@ app.configure(function(){
   app.use(express.static(path.join(__dirname, 'public')));
 });
 
+app.configure('test', function(){
+  app.set('port', 3001);
+});
+
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
@@ -30,5 +34,6 @@ app.configure('development', function(){
 require('./apps/authentication/routes')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+  console.log('Express server listening on port %d in %s mode',
+    app.get('port'), app.get('env'));
 });
