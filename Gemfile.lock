@@ -27,6 +27,8 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.3.1)
+    pry-nav (0.2.2)
+      pry (~> 0.9.10)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
     slop (3.3.3)
@@ -39,4 +41,6 @@ DEPENDENCIES
   guard!
   guard-shell
   listen!
+  pry
+  pry-nav
   rb-inotify

@@ -10,8 +10,10 @@ ignore! %r{^node_modules/}, %r{^.git/}, %r{^tmp/} # override the ignore dirs so 
 #
 guard 'shell' do
   #watch(/./) {|m|
-  watch(%r{^vendor/assets/javascripts/.+\.js$}) {|m|
-    Notifier::notify "Copied #{m[0]} to public/assets/."
-    `cp #{m[0]} public/assets/`
+  watch(%r{^vendor/assets/.+?/(.+\.js)$}) {|m|
+    `mkdir -p public/assets/#{File.dirname(m[1])}`
+    `cp #{m[0]} public/assets/#{m[1]}`
+    #Notifier::notify "Copied #{m[0]} to public/assets/#{m[1]}."
+    puts "Copied #{m[0]} to public/assets/#{m[1]}."
   }
 end
