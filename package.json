@@ -6,7 +6,8 @@
     "express": "3.0.3",
     "jade": "*",
     "coffee-script": "~1.4.0",
-    "mincer": "~0.4.1"
+    "mincer": "~0.4.1",
+    "handlebars": "~1.0.7"
   },
   "devDependencies": {
     "node-dev": "~0.2.9",

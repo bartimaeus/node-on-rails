@@ -1,9 +1,2 @@
-#= require jade-runtime.js
+#= require handlebars.runtime-1.0.rc.1
 #= require_tree ./views
-#= require_self
-
-console.log JST["views/users/login"]
-  title: ''
-  stylesheet: ''
-  username: 'billybob'
-  password: 'joe'
