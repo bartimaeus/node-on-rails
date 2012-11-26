@@ -2,7 +2,14 @@ require('coffee-script');
 
 var express = require('express')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , mincer = require('mincer');
+
+var environment = new mincer.Environment();
+environment.appendPath('app/assets/javascripts');
+environment.appendPath('app/assets/stylesheets');
+environment.appendPath('vendor/assets/javascripts');
+environment.appendPath('vendor/assets/stylesheets');
 
 var app = module.exports = express();
 
@@ -26,6 +33,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.use('/assets', mincer.createServer(environment));
 require('./app/controllers/users')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
