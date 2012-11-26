@@ -1,8 +1,11 @@
-form(action='/sessions', method='post')
-  label
-    | Username
-    input(type='text', name='user', value='{{username}}')
-  label
-    | Password
-    input(type='password', name='password', value='{{password}}')
-  input(type='submit', name='Submit')
+extend ../layouts/application
+
+block content
+  form(action='/sessions', method='post')
+    label
+      | Username
+      input(type='text', name='user', value='{{username}}')
+    label
+      | Password
+      input(type='password', name='password', value='{{password}}')
+    input(type='submit', name='Submit')
