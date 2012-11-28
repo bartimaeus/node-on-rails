@@ -9,7 +9,7 @@ templates['application'] = template(function (Handlebars,depth0,helpers,partials
   foundHelper = helpers.title;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</title><script type=\"text/javascript\" src=\"/assets/application.js\"></script></head><body><div id=\"header\"><h1>";
+  buffer += escapeExpression(stack1) + "</title><script type=\"text/javascript\" src=\"/assets/application.js\"></script><link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/application.css\"></head><body><div id=\"header\"><h1>";
   foundHelper = helpers.title;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
