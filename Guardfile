@@ -3,7 +3,7 @@
 
 require 'securerandom'
 
-#interactor :off # messes with interactive debug
+interactor :off
 notification :notifysend, timeout: 1 # faster timeout on XFCE; otherwise they queue up and get backlogged forever
 ignore! %r{^node_modules/}, %r{^.git/}, %r{^public/}, %r{^tmp/} # override the ignore dirs so vendor/ is not included by default
 

@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "mikes-framework",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -9,7 +9,7 @@
     "mincer": "~0.4.1",
     "handlebars": "~1.0.7",
     "stylus": "~0.31.0",
-    "stylus-images": "~1.0.1"
+    "stylus-sprite": "http://github.com/mikesmullin/stylus-sprite/tarball/master"
   },
   "devDependencies": {
     "node-dev": "~0.2.9",

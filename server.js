@@ -8,6 +8,7 @@ var express = require('express')
 var environment = new mincer.Environment();
 environment.appendPath('app/assets/javascripts');
 environment.appendPath('app/assets/stylesheets');
+environment.appendPath('app/assets/images');
 environment.appendPath('vendor/assets/javascripts');
 environment.appendPath('vendor/assets/stylesheets');
 
